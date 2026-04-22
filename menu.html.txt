@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Café - Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            <h1>☕ Mon Café</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="menu-section">
+        <h1>Notre carte</h1>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="images/coffee1.jpg" alt="Espresso" onerror="this.src='https://via.placeholder.com/300x200?text=Espresso'">
+                <h3>Espresso</h3>
+                <p>Un café pur et intense</p>
+                <span class="price">2.50 €</span>
+                <button class="order-btn">Commander</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/coffee2.jpg" alt="Cappuccino" onerror="this.src='https://via.placeholder.com/300x200?text=Cappuccino'">
+                <h3>Cappuccino</h3>
+                <p>Café, lait moussant et cacao</p>
+                <span class="price">4.00 €</span>
+                <button class="order-btn">Commander</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/coffee3.jpg" alt="Latte" onerror="this.src='https://via.placeholder.com/300x200?text=Latte'">
+                <h3>Café Latte</h3>
+                <p>Double espresso + lait onctueux</p>
+                <span class="price">4.50 €</span>
+                <button class="order-btn">Commander</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/croissant.jpg" alt="Croissant" onerror="this.src='https://via.placeholder.com/300x200?text=Croissant'">
+                <h3>Croissant</h3>
+                <p>Fait maison, feuilleté et doré</p>
+                <span class="price">2.00 €</span>
+                <button class="order-btn">Commander</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Mon Café - Tous droits réservés</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

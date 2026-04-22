@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon Café - Accueil</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">
+<h1>☕ Mon Café</h1>
+</div>
+<ul class="nav-links">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="about.html">À propos</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="gallery.html">Galerie</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</nav>
+</header>
+<main>
+<section class="hero">
+<div class="hero-content">
+<h1>Bienvenue à Mon Café</h1>
+<p>Le meilleur café artisanal de la ville</p>
+<button id="discoverBtn">Découvrir notre menu</button>
+</div>
+</section>
+<section class="features">
+<div class="feature">
+    <h3>☕ Café 100% Arabica</h3>
+    <p>Graines sélectionnées avec soin</p>
+</div>
+<div class="feature">
+    <h3>🥐 Pâtisseries maison</h3>
+    <p>Fraîches chaque matin</p>
+</div>
+<div class="feature">
+    <h3>📖 Ambiance cosy</h3>
+    <p>Parfait pour travailler ou se détendre</p>
+</div>
+</section>
+</main>
+<footer>
+<p>&copy; 2025 Mon Café - Tous droits réservés</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

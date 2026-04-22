@@ -1,0 +1,109 @@
+/**
+ * ملف JavaScript للتفاعلات في موقع Mon Café
+ * يحتوي على:
+ * 1. قائمة الـ burger للجوال
+ * 2. زر اكتشاف القائمة
+ * 3. أزرار الطلب
+ * 4. تفاعل معرض الصور
+ * 5. نموذج الاتصال
+ */
+
+// انتظار تحميل الصفحة بالكامل قبل تنفيذ الأكواد
+document.addEventListener('DOMContentLoaded', function() {
+
+    // ========================================
+    // 1. قائمة الـ burger (لإظهار/إخفاء القائمة في الجوال)
+    // ========================================
+    
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (burger) {
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // ========================================
+    // 2. زر الاكتشاف في الصفحة الرئيسية
+    // ========================================
+    
+    const discoverBtn = document.getElementById('discoverBtn');
+    
+    if (discoverBtn) {
+        discoverBtn.addEventListener('click', () => {
+            window.location.href = 'menu.html';
+        });
+    }
+
+    // ========================================
+    // 3. أزرار الطلب في صفحة القائمة
+    // ========================================
+    
+    const orderBtns = document.querySelectorAll('.order-btn');
+    
+    orderBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            alert('✅ Produit ajouté à votre commande ! Nous vous contacterons bientôt.');
+        });
+    });
+
+    // ========================================
+    // 4. معرض الصور (عند النقر على صورة تظهر رسالة)
+    // ========================================
+    
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const galleryMessage = document.getElementById('galleryMessage');
+    
+    if (galleryImages.length > 0) {
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                if (galleryMessage) {
+                    galleryMessage.innerHTML = `<span style="color: #d2691e; font-weight: bold;">📸 Vous avez cliqué sur : ${img.alt}</span>`;
+                    setTimeout(() => {
+                        galleryMessage.innerHTML = '';
+                    }, 2000);
+                }
+            });
+        });
+    }
+
+    // ========================================
+    // 5. نموذج الاتصال (التحقق من الحقول وإظهار رسالة)
+    // ========================================
+    
+    const contactForm = document.getElementById('contactForm');
+    const formFeedback = document.getElementById('formFeedback');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && message) {
+                formFeedback.innerHTML = `<p style="color: green; background-color: #e8f5e9; padding: 15px; border-radius: 8px;">
+                    ✅ Merci ${name} ! Nous avons bien reçu votre message. Nous vous répondrons sur ${email} dans les 24h.
+                </p>`;
+                contactForm.reset();
+            } else {
+                formFeedback.innerHTML = `<p style="color: red; background-color: #ffebee; padding: 15px; border-radius: 8px;">
+                    ❌ Veuillez remplir tous les champs du formulaire.
+                </p>`;
+            }
+        });
+    }
+
+    // ========================================
+    // 6. (إضافي) تأثير ظهور الصفحة بسلاسة
+    // ========================================
+    
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s';
+    setTimeout(() => {
+        document.body.style.opacity = '1';
+    }, 100);
+
+});

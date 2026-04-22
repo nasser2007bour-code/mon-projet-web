@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Café - À propos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            <h1>☕ Mon Café</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="about-section">
+        <h1>Notre histoire</h1>
+        <div class="about-content">
+            <img src="images/about.jpg" alt="Notre café" onerror="this.src='https://via.placeholder.com/400x300?text=Café'">
+            <div>
+                <p>Fondé en 2020, Mon Café est né d'une passion pour le café de spécialité.</p>
+                <p>Nous travaillons directement avec des producteurs locaux pour vous offrir des arômes uniques.</p>
+                <p>Notre équipe de baristas vous accueille chaque jour avec le sourire.</p>
+                <p>📍 Adresse: 123 Rue de Paris, 75001 Paris</p>
+                <p>⏰ Horaires: Tous les jours de 8h à 20h</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Mon Café - Tous droits réservés</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
